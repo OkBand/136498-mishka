@@ -1,0 +1,47 @@
+@import "../variables.less";
+@import "../global/fonts.less";
+
+.modal {
+  min-width: 320px;
+
+  outline: 1px dashed red;
+}
+
+.modal__title {
+  .font(25px, 600, 30px, @color-headers);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__text {
+.font();
+}
+
+.modal__wrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.modal__btn {
+  min-width: 78px;
+  margin-right: 7px;
+
+  .font(17px, 600, 16px);
+  text-transform: uppercase;
+
+  border: 2px solid @color-fade;
+}
+
+.modal__btn--active {
+    border: 2px solid @green-1;
+}
+
+.modal__add-btn {
+    min-width: 260px;
+
+    .font(17px, 600, 16px, @white);
+
+    background-color: @green-1;
+
+    border: none;
+}

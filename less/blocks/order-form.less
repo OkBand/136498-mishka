@@ -1,0 +1,44 @@
+@import "../variables.less";
+@import "../global/fonts.less";
+
+.order-form {
+  outline: 1px dashed red;
+}
+
+.order-form__text {
+  .font(13px, 400, 24px, @color-main);
+}
+
+.order-form__fieldset {
+  border: 0;
+}
+
+.order-form__legend {
+  .font(17px, 600, 16px, @green-1);
+  text-transform: uppercase;
+}
+
+.order-form ul {
+  list-style: none;
+}
+
+.order-form label {
+  .font(17px, 600, 18px, @color-headers);
+}
+
+.order-form input {
+  .font(17px, 400, 18px, @color-main);
+}
+
+.order-form textarea {
+  .font(17px, 400, 18px, @color-main);
+}
+
+.order-form__note {
+  .font(14px, 400, 16px, @color-main);
+}
+
+.order-form__btn {
+  .font(17px, 600, 16px, @color-main);
+  border: 2px solid @color-main;
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTMLAcademy: Mishka</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -95,7 +96,7 @@
           </table>
         </section>
         <div class="map">
-          <div class="map__image--no-js visually-hidden">
+          <div class="visually-hidden">
             <img src="http://placehold.it/320x457" width="320" height="457" alt="Карта">
           </div>
           <div class="map__logo">
@@ -105,8 +106,8 @@
         <a class="page-footer__feedback-btn btn">Напишите нам</a>
         <div class="page-footer__links-wrapper">
           <ul class="page-footer__social social-btns">
-            <li class="social-btn social-btn--inst"><a href="#">Инстаграм</a></li>
-            <li class="social-btn social-btn--fb"><a href="#">Фейсбук</a></li>
+            <li class="social-btns__btn social-btns__btn--inst"><a href="#">Инстаграм</a></li>
+            <li class="social-btns__btn social-btns__btn--fb"><a href="#">Фейсбук</a></li>
             <li class="social-btn social-btn--tw"><a href="#">Твиттер</a></li>
           </ul>
           <a class="page-footer__copyright" href="#">Разработано <span class="visually-hidden">HTMLAcademy</span></a>
@@ -117,7 +118,7 @@
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <div class="modal__wrapper">
-        <button class="modal__btn btn">S</button>
+        <button class="modal__btn modal__btn--active btn">S</button>
         <button class="modal__btn btn">M</button>
         <button class="modal__btn btn">L</button>
         <a class="modal__add-btn btn">Добавить</a>
