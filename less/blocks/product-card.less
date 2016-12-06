@@ -1,41 +1,22 @@
-@import "../variables.less";
-@import "../global/fonts.less";
-
 .product-card {
-  .font();
   outline: 1px dashed red;
 }
 
 .product-card__title {
-  .font (25px, 600, 30px, @color-headers);
+  font: 600 25px/30px sans-serif;
+  color: @color-main--dark;
 }
 
 .product-card__subtitle {
-  .font(17px, 600, 16px, @green-1);
+  font: 600 17px/16px sans-serif;
+  color: @color-secondary;
   text-transform: uppercase;
-}
-
-.product-card__table {
-
-}
-
-.product-card__attribute {
-
-}
-
-.product-card__value {
-
-}
-
-.product-card__image {
-
-}
-
-.product-card__price {
-
 }
 
 .product-card__order {
   min-width: 256px;
   border: 2px solid @color-main;
+
+  font: 600 17px/16px sans-serif;
+  color: @color-main;
 }

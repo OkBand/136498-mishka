@@ -1,37 +1,29 @@
-@import "../variables.less";
-@import "../global/fonts.less";
-
 .reviews {
-  .font();
   outline: 1px dashed red;
 }
 
 .reviews__title {
-  .font(25px, 600, 30px, @color-headers);
-}
-
-.reviews__item {
-
+  font: 600 25px/30px sans-serif;
+  color: @color-main--dark;
 }
 
 .reviews__author {
-  .font(18px, 600, normal, @color-headers);
+  font: 600 18px/normal sans-serif;
+  color: @color-main--dark;
 }
 
 .reviews__email {
-  .font(16px);
+  font: 400 16px sans-serif;
+  color: @color-main;
 }
 
 .reviews__btn {
   min-width: 136px;
   border: 2px solid @color-main;
-
+  color: @color-main;
 }
 
-.reviews__prev {
-
-}
-
+.reviews__prev,
 .reviews__next {
-
+  border: 1px solid @gray;
 }

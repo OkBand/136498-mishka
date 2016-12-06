@@ -1,12 +1,10 @@
-@import "../variables.less";
-@import "../global/fonts.less";
-
 .order-form {
   outline: 1px dashed red;
 }
 
 .order-form__text {
-  .font(13px, 400, 24px, @color-main);
+  font: 13px/24px sans-serif;
+  color: @color-main;
 }
 
 .order-form__fieldset {
@@ -14,7 +12,8 @@
 }
 
 .order-form__legend {
-  .font(17px, 600, 16px, @green-1);
+  font: 600 17px/16px sans-serif;
+  color: @color-secondary;
   text-transform: uppercase;
 }
 
@@ -23,22 +22,29 @@
 }
 
 .order-form label {
-  .font(17px, 600, 18px, @color-headers);
+  font: 600 17px/18px sans-serif;
+  color: @color-main--dark;
 }
 
 .order-form input {
-  .font(17px, 400, 18px, @color-main);
+  font: 17px/18px sans-serif;
+  color: lighten(@color-main, 55.5%);
 }
 
 .order-form textarea {
-  .font(17px, 400, 18px, @color-main);
+  font: 17px/18px sans-serif;
+  color: lighten(@color-main, 55.5%);
+
+  resize: none;
 }
 
 .order-form__note {
-  .font(14px, 400, 16px, @color-main);
+  font: 14px/16px sans-serif;
+  color: @color-main;
 }
 
 .order-form__btn {
-  .font(17px, 600, 16px, @color-main);
+  font: 600 17px/16px sans-serif;
+  color: @color-main;
   border: 2px solid @color-main;
 }
