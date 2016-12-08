@@ -1,6 +1,5 @@
 .page-footer {
-  font: 15px/30px sans-serif;
-
+  line-height: @line-high;
 }
 
 .page-footer__wrapper {
@@ -8,11 +7,6 @@
   padding: 0 30px;
 
   outline: 1px dashed red;
-}
-
-.page-footer__feedback-btn {
-  min-width: 25px;
-  border: 2px solid @color-main;
 }
 
 .page-footer__links-wrapper {
@@ -24,6 +18,8 @@
 }
 
 .page-footer__copyright {
-  font: 600 19px/18px sans-serif;
+  font-size: @font-big;
+  font-weight: 600;
+  line-height: @line-shorter;
   color: @color-main--dark;
 }

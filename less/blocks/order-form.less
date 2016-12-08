@@ -1,10 +1,15 @@
 .order-form {
+  font-size: @font-big;
+  font-weight: 600;
+  line-height: @line-shorter;
+
   outline: 1px dashed red;
 }
 
 .order-form__text {
-  font: 13px/24px sans-serif;
-  color: @color-main;
+  font-size: @font-smaller;
+  font-weight: 400;
+  line-height: @line-main;
 }
 
 .order-form__fieldset {
@@ -12,7 +17,6 @@
 }
 
 .order-form__legend {
-  font: 600 17px/16px sans-serif;
   color: @color-secondary;
   text-transform: uppercase;
 }
@@ -22,29 +26,22 @@
 }
 
 .order-form label {
-  font: 600 17px/18px sans-serif;
+
   color: @color-main--dark;
 }
 
 .order-form input {
-  font: 17px/18px sans-serif;
   color: lighten(@color-main, 55.5%);
 }
 
 .order-form textarea {
-  font: 17px/18px sans-serif;
   color: lighten(@color-main, 55.5%);
 
   resize: none;
 }
 
 .order-form__note {
-  font: 14px/16px sans-serif;
-  color: @color-main;
-}
-
-.order-form__btn {
-  font: 600 17px/16px sans-serif;
-  color: @color-main;
-  border: 2px solid @color-main;
+  font-size: @font-smaller;
+  font-weight: 400;
+  line-height: @line-short;
 }

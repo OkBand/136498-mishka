@@ -5,38 +5,27 @@
 }
 
 .modal__title {
-  font: 600 25px/30px sans-serif;
+  font-size: @font-bigger;
+  font-weight: 600;
+  line-height: @line-high;
   color: @color-main--dark;
   text-align: center;
   text-transform: uppercase;
 }
+
 
 .modal__wrapper {
   margin: 0 auto;
   padding: 0 30px;
 }
 
-.modal__btn {
+.modal .modal__btn {
   min-width: 78px;
   margin-right: 7px;
-
-  font: 600 17px/16px sans-serif;
-  text-transform: uppercase;
 
   border: 2px solid @gray;
 }
 
 .modal__btn--active {
     border: 2px solid @color-secondary;
-}
-
-.modal__add-btn {
-    min-width: 260px;
-
-    font: 600 17px/16px sans-serif;
-    color: @color-main--light;
-
-    background-color: @color-secondary;
-
-    border: none;
 }
