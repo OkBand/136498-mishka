@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTMLAcademy: Mishka-form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header>
@@ -32,7 +33,7 @@
         <p class="order-form__text">
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
-        <fieldset class="order-form__type">
+        <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Тип</legend>
           <ul>
             <li>
@@ -45,7 +46,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__color">
+        <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Цвет</legend>
           <ul>
             <li>
@@ -74,7 +75,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__name">
+        <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">ФИО</legend>
           <ul>
             <li>
@@ -91,15 +92,15 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__phone">
+        <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Тел</legend>
           <input type="tel" name="phone-field" id="phone" pattern="[\+][0-9]{8}" placeholder= "+7 XXX XX XX*" required>
         </fieldset>
-        <fieldset class="order-form__email">
+        <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">e-mail</legend>
           <input type="email" name="email-field" id="email" placeholder="Ваш Email*" required>
         </fieldset>
-        <fieldset class="order-form__extra">
+        <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Доп</legend>
           <textarea name="extra-field" id="extra" rows="7" cols="17">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
