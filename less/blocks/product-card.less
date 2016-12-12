@@ -1,11 +1,15 @@
 .product-card {
-  outline: 1px dashed red;
+
+  outline: 1px dashed black;
 }
 
 .product-card__title {
+  margin: 0;
   font-size: @font-bigger;
   font-weight: 600;
   color: @color-main--dark;
+
+  outline: 1px dashed blue;
 }
 
 .product-card__subtitle {
@@ -13,4 +17,127 @@
   font-weight: 600;
   color: @color-secondary;
   text-transform: uppercase;
+}
+
+.product-card__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: 1px dashed blue;
+}
+
+.product-card__image {
+  text-align: center;
+}
+
+.product-card__table {
+  outline: 1px dashed green;
+}
+
+.product-card__price {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  text-align: center;
+
+  outline: 1px dashed green;
+}
+
+.product-card__order {
+  margin: 0 auto;
+
+  outline: 1px dashed green;
+
+}
+
+@media @tablet-width {
+  .product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .product-card__title {
+    font-size: 2.5 * @font-big;
+    padding: 20px 0;
+  }
+
+  .product-card__subtitle {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 72px;
+    text-align: center;
+  }
+
+  .product-card__left {
+    width: 334px;
+  }
+
+  .product-card p {
+    font-size: @font-big;
+    line-height: 30px;
+  }
+
+  .product-card__image {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    width: 334px;
+    height: 404px;
+    z-index: -1;
+
+    outline: 1px dashed blue;
+  }
+
+  .product-card tr {
+    line-height: 40px;
+  }
+
+  .product-card__attribute {
+    min-width: 87px;
+  }
+
+  .product-card__value {
+    min-width: 211px;
+  }
+
+  .product-card__price {
+    text-align: center;
+
+  }
+
+  .product-card__order {
+
+  }
+
+}
+
+@media @desktop-width {
+  .product-card {
+    min-height: 707px;
+  }
+
+  .product-card__title {
+    margin-top: 80px;
+    margin-left: 175px;
+    font-size: 3 * @font-big;
+    padding: 20px 0;
+  }
+
+  .product-card__subtitle {
+    top: 205px;
+    left: 30px;
+  }
+
+  .product-card__left {
+    width: 350px;
+    margin-left: 175px;
+  }
+
+  .product-card__image {
+    top: 80px;
+    width: 525px;
+    height: 636px;
+  }
 }

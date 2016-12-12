@@ -1,16 +1,27 @@
 .categories {
+  width: auto;
+  margin-bottom: 30px;
   font-size: @font-big;
   font-weight: 600;
 
   outline: 1px dashed red;
+
 }
 
 .categories__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.categories__category {
+
 }
 
 .categories__interior,
 .categories__toys {
+  display: block;
+  min-height: 103px;
   color: @color-main--light;
 }
 
@@ -20,4 +31,17 @@
 
 .categories__toys {
   background-color: @color-secondary--dark;
+}
+
+@media @tablet-width {
+  .categories__list {
+    display: table;
+    width: 100%;
+  }
+
+  .categories__category {
+    display: table-cell;
+    width: 50%;
+  }
+
 }

@@ -1,9 +1,69 @@
 .process-video {
+  margin-bottom: 30px;
   outline: 1px dashed red;
 }
 
 .process-video__title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 34.6%;
+  padding-right: 40px;
+
   font-size: @font-big;
   font-weight: 600;
   color: @color-main--dark;
+
+}
+
+.process-video__video {
+  width: 260px;
+  min-height: 150px;
+  margin: 0 auto;
+
+  outline: 1px dashed blue;
+}
+
+.process-video__text {
+  margin: 0 auto;
+  padding: 34px 13%;
+
+  outline: 1px dashed blue;
+}
+
+.process-video__btn {
+  display: block;
+  width: 190px;
+  margin: 0 auto;
+  margin-bottom: 33px;
+
+  outline: 1px dashed blue;
+}
+
+@media @tablet-width {
+}
+
+@media @desktop-width {
+  .process-video {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .process-video__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 682px;
+    height: 455px;
+  }
+
+  .process-video__text {
+    width: 34%;
+    margin: 0;
+  }
+
+  .process-video__btn {
+      margin: 0;
+  }
 }

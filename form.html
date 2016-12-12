@@ -2,29 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTMLAcademy: Mishka-form</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header>
-      <div class="page-header__logo">
-        <a class="page-header__logo-link" href="index.html">
-          <img src="http://placehold.it/95x50" width="95" height="50" alt="MISHKA">
-        </a>
-      </div>
-      <nav class="main-nav main-nav--closed">
-        <span class="main-nav__toggle"></span>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__items visually-hidden">
-            <li class="main-nav__item"><a href="index.html">Главная</a></li>
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item main-nav__item--active"><a>Вязание на заказ</a></li>
-            <li class="main-nav__item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
+    <header class="page-header page-header--inner-header">
+      <nav class="main-nav">
+        <a class="main-nav__logo-link main-nav__logo-link--mobile" href="index.html"><img src="http://placehold.it/95x50" width="95" height="50" alt="MISHKA"></a>
+        <span class="main-nav__toggle">Откр</span>
+        <span class="main-nav__close visually-hidden">Закр</span>
+        <div class="main-nav__wrapper main-nav__wrapper--closed">
+          <ul class="main-nav__items">
+            <li class="logo main-nav__logo"><a class="main-nav__logo-link main-nav__logo-link--desk" href="index.html"><img src="http://placehold.it/95x50" width="95" height="50" alt="MISHKA"></a></li>
+            <li class="main-nav__item main-nav__item--1"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item main-nav__item--2"><a href="form.html">Вязание на заказ</a></li>
+            <li class="main-nav__item main-nav__item--search"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item main-nav__item--basket"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item main-nav__item--3"><a href="#">Новые поступления</a></li>
+            <li class="main-nav__item main-nav__item--4"><a href="#">Распродажа</a></li>
+            <li class="main-nav__item main-nav__delivery">
+            <a href="#">Бесплатная доставка по России</a></li>
           </ul>
         </div>
       </nav>
-      <div class="inner-header-title inner-header-wrapper">
+      <div class="inner-header-title">
         <h1 class="inner-header-title__text">Вязание на заказ</h1>
       </div>
     </header>
@@ -110,13 +112,15 @@
     </main>
     <footer>
       <div class="page-footer__links-wrapper">
+        <div class="page-footer__logo"></div>
         <ul class="page-footer__social social-btns">
-          <li class="social-btn social-btn--inst"><a href="#">Инстаграм</a></li>
-          <li class="social-btn social-btn--fb"><a href="#">Фейсбук</a></li>
-          <li class="social-btn social-btn--tw"><a href="#">Твиттер</a></li>
+          <li class="social-btns__btn social-btns__btn--inst"><a href="#">Инстаграм</a></li>
+          <li class="social-btns__btn social-btns__btn--fb"><a href="#">Фейсбук</a></li>
+          <li class="social-btns__btn social-btns__btn--tw"><a href="#">Твиттер</a></li>
         </ul>
         <a class="page-footer__copyright" href="#">Разработано <span class="visually-hidden">HTMLAcademy</span></a>
       </div>
     </footer>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

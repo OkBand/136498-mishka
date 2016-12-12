@@ -13,5 +13,38 @@
 }
 
 .features__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.features__item {
+  width: 100%;
+  min-height: 120px;
+
+  outline: 1px dashed blue;
+}
+
+@media @tablet-width {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    width: 50%;
+    min-height: 160px;
+  }
+
+}
+
+@media @desktop-width {
+  .features__list {
+      width: 60.86%;
+      margin: 0 auto;
+  }
+
+  .features__item {
+
+  }
 }
