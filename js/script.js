@@ -3,12 +3,11 @@ var close = document.querySelector(".main-nav__close");
 var mainNav = document.querySelector(".main-nav__wrapper");
 
 toggle.addEventListener("click", function(event) {
-	event.preventDefault();
+  event.preventDefault();
   toggle.classList.add("visually-hidden");
   close.classList.remove("visually-hidden");
   mainNav.classList.remove("main-nav__wrapper--closed");
 });
-
 
 close.addEventListener("click", function(event) {
 	event.preventDefault();
