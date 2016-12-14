@@ -10,7 +10,7 @@ toggle.addEventListener("click", function(event) {
 });
 
 close.addEventListener("click", function(event) {
-	event.preventDefault();
+event.preventDefault();
   close.classList.add("visually-hidden");
   toggle.classList.remove("visually-hidden");
   mainNav.classList.add("main-nav__wrapper--closed");
