@@ -1,11 +1,9 @@
 .btn {
   display: inline-block;
   min-width: 256px;
-  margin: 0 auto;
   padding: 20px 20px;
   font-size: @font-big;
   font-weight: 600;
-  line-height: @line-short;
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
@@ -14,14 +12,30 @@
   cursor: pointer;
   color: @color-main;
   border: 2px solid @color-main;
+
+  &--bg-green {
+    width: 61.9%;
+    min-width: 260px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 32px;
+    color: @color-main--light;
+    background-color: @color-secondary;
+    border: none;
+  }
+
+  &--flex {
+      box-sizing: border-box;
+      min-width: 260px;
+      max-height: 52px;
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
 }
 
-.btn--bg-green {
-  min-width: 260px;
+@media @tablet-width {
 
-  color: @color-main--light;
-
-  background-color: @color-secondary;
-
-  border: none;
+  .btn {
+    min-width: 171px;
+  }
 }

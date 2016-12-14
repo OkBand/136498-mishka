@@ -1,18 +1,32 @@
 .modal {
-  min-width: 320px;
-
+  position: fixed;
+  top: 30%;
+  left: 27.5%;
+  z-index: 5;
+  min-width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 335px;
+  background-color: @color-main--light;
   outline: 1px dashed red;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .modal__title {
   font-size: @font-bigger;
   font-weight: 600;
-  line-height: @line-high;
   color: @color-main--dark;
   text-align: center;
   text-transform: uppercase;
 }
-
 
 .modal__wrapper {
   margin: 0 auto;
@@ -22,10 +36,16 @@
 .modal .modal__btn {
   min-width: 78px;
   margin-right: 7px;
-
   border: 2px solid @gray;
 }
 
 .modal__btn--active {
     border: 2px solid @color-secondary;
+}
+
+@media @tablet-width {
+  .modal {
+    width: 565px;
+    margin: 0 auto;
+  }
 }

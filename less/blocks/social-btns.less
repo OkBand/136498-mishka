@@ -1,14 +1,25 @@
 .social-btns {
+  display: flex;
+  justify-content: space-around;
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  outline: 1px dashed red;
+  outline: 1px dashed blue;
+}
+
+.social-btns__btn {
+  margin: auto 20px;
 }
 
 .social-btns__btn a {
   position: relative;
-  display: inline-block;
   min-width: 25px;
-  margin: 0;
-  margin-right: 40px;
-  vertical-align: top;
   text-decoration: none;
+}
+
+@media @tablet-width {
+  .social-btns__btn a {
+    padding-top: 25px;
+  }
 }
