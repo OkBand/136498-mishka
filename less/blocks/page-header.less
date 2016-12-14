@@ -10,8 +10,8 @@
 
   &--inner-header {
     min-height: 329px;
-    background-image: linear-gradient(@color-main--light 50px, @gray--light 50px);
-    background-position: 50% 40px;
+    background-image: linear-gradient(@gray--light 1px, @gray--light 50px);
+    background-position: 50% 65px;
     background-repeat: no-repeat;
   }
 }
@@ -22,11 +22,14 @@
 }
 
 @media @tablet-width {
-  .page-header--main-header {
-    background-position: 50% 88px;
+  .page-header {
+
+    &--main-header {
+      background-position: 50% 88px;
+    }
+
+    &--inner-header {
+      background-position: 50% 90px;
+    }
   }
-}
-
-@media @desktop-width {
-
 }

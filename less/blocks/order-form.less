@@ -1,15 +1,26 @@
 .order-form {
   font-size: @font-big;
   font-weight: 600;
-
   outline: 1px dashed red;
 }
 
 .order-form__text {
-  padding-top: 26px;
-  padding-bottom: 20px;
+  .container();
+  margin-top: 26px;
+  margin-bottom: 20px;
   font-size: @font-smaller;
   font-weight: 400;
+  outline: 1px dashed black;
+}
+
+.order-form__fieldset-wrapper {
+  .container();
+  outline: 1px dashed black;
+}
+
+.order-form__bottom {
+  .container();
+  outline: 1px dashed black;
 }
 
 .order-form__fieldset {
@@ -18,14 +29,11 @@
   padding: 0;
   padding-top: 20px;
   border: 0;
-
-  outline: 1px dashed black;
 }
 
 .order-form__legend {
   color: @color-secondary;
   text-transform: uppercase;
-
   outline: 1px dashed blue;
 }
 
@@ -51,7 +59,6 @@
 
 .order-form textarea {
   color: lighten(@color-main, 55.5%);
-
   resize: none;
 }
 
@@ -66,22 +73,12 @@
 }
 
 @media @tablet-width {
-  .order-form__background {
-    background-image: linear-gradient(@color-main--light 150px, @gray--light 50px);
-  }
-
   .order-form {
     width: auto;
   }
 
-  .order-form__fieldset {
-
-    /*&--color .order-form__fieldset-wrapper,
-    &--phone .order-form__fieldset-wrapper,
-    &--email .order-form__fieldset-wrapper {
-      background-image: linear-gradient(@gray--light 100%, @color-main--light 1%);
-      background-size: 100vw;
-    }*/
+  .order-form__background-wrapper {
+    background-color: @gray--light;
   }
 
   .order-form__fieldset-wrapper {
