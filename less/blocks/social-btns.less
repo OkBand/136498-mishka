@@ -1,25 +1,119 @@
 .social-btns {
   display: flex;
-  justify-content: space-around;
-  min-height: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 50%;
   margin: 0;
   padding: 0;
+  padding-top: 23px;
+  padding-bottom: 27px;
   list-style: none;
-  outline: 1px dashed blue;
+  border-bottom: 1px solid @gray;
 }
 
 .social-btns__btn {
-  margin: auto 20px;
+  margin: auto 0;
+  margin-right: 9%;
+}
+
+.social-btns__text {
+  font-size: 0;;
+}
+
+.social-btns li:last-child {
+  margin-right: 0;
 }
 
 .social-btns__btn a {
   position: relative;
-  min-width: 25px;
+  display: block;
+  width: 30px;
+  height: 30px;
   text-decoration: none;
 }
 
+.social-btns__btn--inst a {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../img/icon-insta.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:hover::before {
+
+  }
+  &:active::before {
+
+  }
+}
+
+.social-btns__btn--fb a {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../img/icon-fb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:hover::before {
+
+  }
+  &:active::before {
+
+  }
+}
+
+.social-btns__btn--tw a {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../img/icon-twitter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:hover::before {
+
+  }
+  &:active::before {
+
+  }
+}
+
 @media @tablet-width {
+  .social-btns {
+    margin-left: 12%;
+    padding-top: 40px;
+  }
   .social-btns__btn a {
-    padding-top: 25px;
+    padding: 0;
+  }
+}
+
+@media @desktop-width {
+  .social-btns__btn a {
+    padding: 0;
+  }
+
+  .social-btns__btn {
+    margin-right: 5.6%;
   }
 }

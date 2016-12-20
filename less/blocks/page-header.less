@@ -1,35 +1,29 @@
 .page-header {
-  width: auto;
 
   &--main-header {
     min-height: 568px;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 80px;
+    background-position: 50% 81px;
   }
 
   &--inner-header {
-    min-height: 329px;
     background-image: linear-gradient(@gray--light 1px, @gray--light 50px);
-    background-position: 50% 65px;
+    background-position: 50% 78px;
     background-repeat: no-repeat;
   }
 }
 
-.page-header__wrapper {
-  .container();
-  padding: 0 7%;
-}
-
 @media @tablet-width {
   .page-header {
+    background-position: 50% 90px;
 
     &--main-header {
-      background-position: 50% 88px;
-    }
-
-    &--inner-header {
-      background-position: 50% 90px;
+      background-image: url("../img/hero-desktop.jpg");
     }
   }
+}
+
+@media @desktop-width {
+
 }

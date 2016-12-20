@@ -1,10 +1,12 @@
 .reviews {
-  margin-bottom: 90px;
+  margin-bottom: 88px;
+  padding: 0 7%;
   text-align: center;
-  outline: 1px dashed red;
 }
 
 .reviews__title {
+  margin-bottom: 18px;
+  padding-left: 8px;
   font-size: @font-bigger;
   font-weight: 600;
   color: @color-main--dark;
@@ -13,12 +15,19 @@
 
 .reviews__item {
   margin: 0;
+  padding-left: 8px;
   text-align: left;
+  line-height: 30px;
+}
+
+.reviews__item p {
+  padding-bottom: 9px;
 }
 
 .reviews__author {
   font-size: @font-big;
-  font-weight: 600;
+  font-weight: 500;
+  font-style: normal;
   color: @color-main--dark;
 }
 
@@ -28,25 +37,24 @@
 }
 
 .reviews__pagination {
-  padding: 35px 0;
+  display: flex;
+  min-height: 51px;
+  padding: 29px 0;
+  padding-bottom: 38px;
   text-align: center;
 }
 
 .reviews .reviews__pages {
-  display: inline-block;
-  min-width: 136px;
+  min-width: 130px;
   border: 1px solid @gray;
-}
-
-.reviews__btn {
-  margin: 0 auto;
 }
 
 @media @tablet-width {
   .reviews {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: -2px;
+    padding: 0;
     text-align: left;
   }
 
@@ -54,33 +62,79 @@
     order: -2;
     width: 50%;
     margin: 0;
-    outline: 1px dashed blue;
+    margin-top: 65px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: @font-bigger * 1.75;
   }
 
 .reviews__btn {
     order: -1;
     margin: 0;
+    margin-top: 76px;
+    margin-left: 162px;
   }
 
   .reviews__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: @font-big;
+  }
+
+  .reviews__item p {
+    margin-bottom: 30px;
   }
 
   .reviews__author {
+    margin-top: 21px;
     width: 50%;
   }
 
-.reviews .reviews__pages {
+  .reviews .reviews__pages {
+    min-width: 90px;
+    margin-top: 0px;
     border: 0;
-    outline: 1px dashed blue;
   }
 }
 
 @media @desktop-width {
   .reviews {
-      width: 875px;
-      padding-left: 175px;
+      padding-left: 171px;
   }
+
+  .reviews__title {
+    margin-bottom: 18px;
+    font-size: @font-biggest * 1.96;
+  }
+
+  .reviews__item {
+    padding-left: 5px;
+    margin-bottom: 60px;
+  }
+
+  .reviews__item p {
+    margin-bottom: 5px;
+  }
+
+  .reviews__author {
+    width: 30%;
+  }
+
+  .reviews__pagination {
+    min-height: 45px;
+  }
+
+  .reviews .reviews__pages {
+    min-width: 85px;
+  }
+
+  .reviews__btn {
+      order: -1;
+      margin: 0;
+      margin-top: 88px;
+      margin-left: 268px;
+    }
 }

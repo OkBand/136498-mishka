@@ -1,40 +1,106 @@
+@media @mobile-width-only {
+  .categories__list li {
+    .container();
+    padding: 0 7%;
+  }
+}
+
 .categories {
   width: auto;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   font-size: @font-big;
   font-weight: 600;
-  outline: 1px dashed red;
 }
 
 .categories__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  background-image: linear-gradient(@color-secondary 50%, @color-secondary--dark 50%);
+}
+
+.categories__list li:first-child {
+  background-image: url(../img/icon-interior.svg);
+  background-repeat: no-repeat;
+  background-position: 75% 20px;
+}
+
+.categories li:nth-child(2) {
+  background-image: url(../img/icon-toy.svg);
+  background-repeat: no-repeat;
+  background-position: 77% 20px;
 }
 
 .categories__interior,
 .categories__toys {
   display: block;
-  min-height: 103px;
+  width: 104px;
+  padding: 21px 9px;
+  padding-bottom: 27px;
+  font-size: @font-big;
+  line-height: 1.5;
   color: @color-main--light;
 }
 
-.categories__interior {
-  background-color: @color-secondary;
-}
-
-.categories__toys {
-  background-color: @color-secondary--dark;
-}
-
 @media @tablet-width {
-  .categories__list {
-    display: table;
-    width: 100%;
+  .categories {
+    .container();
+    padding: 0 6.4%;
   }
 
-  .categories__category {
-    display: table-cell;
-    width: 50%;
+  .categories__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    background: none;
+  }
+
+  .categories__list li {
+    flex-basis: 50%;
+    padding: 0;
+  }
+
+  .categories__list li:first-child {
+    background-color: @color-secondary;
+  }
+
+  .categories li:nth-child(2) {
+    background-color: @color-secondary--dark;
+  }
+
+  .categories__category a {
+    padding-top: 28px;
+    padding-left: 35px;
+    font-size: 20px;
+  }
+
+  .categories__list li:first-child {
+    background-image: url(../img/icon-interior.svg);
+    background-repeat: no-repeat;
+    background-position: 87% 25px;
+  }
+
+  .categories li:nth-child(2) {
+    background-image: url(../img/icon-toy.svg);
+    background-repeat: no-repeat;
+    background-position: 87% 25px;
+  }
+}
+
+@media @desktop-width {
+  .categories {
+    margin-bottom: 12px;
+  }
+
+  .categories__list li:first-child {
+    background-image: url(../img/icon-interior.svg);
+    background-repeat: no-repeat;
+    background-position: 92.5% 29px;
+  }
+
+  .categories li:nth-child(2) {
+    background-image: url(../img/icon-toy.svg);
+    background-repeat: no-repeat;
+    background-position: 93% 30px;
   }
 }
