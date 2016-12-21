@@ -1,14 +1,42 @@
 .inner-header-title {
-  min-height: 177px;
   text-align: center;
   background-color: @gray--light;
-  outline: 1px dashed red;
 }
 
 .inner-header-title__text {
   padding-top: 60px;
+  padding-bottom: 72px;
   margin: 0;
   font-size: @font-biggest;
   font-weight: 600;
   color: @color-main--dark;
+}
+
+@media @tablet-width {
+  .inner-header-title {
+    padding: 0 6.4%;
+    margin-bottom: 55px;
+  }
+
+  .inner-header-title__text {
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 75px;
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+  }
+}
+
+@media @desktop-width {
+  .inner-header-title {
+    margin-bottom: 113px;
+    padding: 0 4.76%;
+  }
+
+  .inner-header-title__text {
+    padding-bottom: 88px;
+    font-size: @font-biggest * 1.96;
+  }
 }

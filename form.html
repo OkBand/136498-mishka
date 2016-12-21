@@ -9,23 +9,19 @@
   <body>
     <header class="page-header page-header--inner-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav">
-          <a class="main-nav__logo-link main-nav__logo-link--mobile" href="index.html"><img src="http://placehold.it/95x50" width="95" height="50" alt="MISHKA"></a>
-          <span class="main-nav__toggle">Откр</span>
-          <span class="main-nav__close visually-hidden">Закр</span>
-          <div class="main-nav__wrapper main-nav__wrapper--closed">
-            <ul class="main-nav__items">
-              <li class="logo main-nav__logo"><a class="main-nav__logo-link main-nav__logo-link--desk" href="index.html"><img src="http://placehold.it/95x50" width="95" height="50" alt="MISHKA"></a></li>
-              <li class="main-nav__item main-nav__item--1"><a href="catalog.html">Каталог товаров</a></li>
-              <li class="main-nav__item main-nav__item--2"><a href="form.html">Вязание на заказ</a></li>
-              <li class="main-nav__item main-nav__item--search"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
-              <li class="main-nav__item main-nav__item--basket"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
-              <li class="main-nav__item main-nav__item--3"><a href="#">Новые поступления</a></li>
-              <li class="main-nav__item main-nav__item--4"><a href="#">Распродажа</a></li>
-              <li class="main-nav__item main-nav__delivery">
+        <nav class="main-nav main-nav--closed  main-nav--nojs">
+          <span class="main-nav__toggle"></span>
+          <ul class="main-nav__items">
+            <li class="logo main-nav__logo"><a class="main-nav__logo-link main-nav__logo-link--desk" href="index.html"><img src="img/logo-mobile.svg" width="95" height="50" alt="MISHKA"></a></li>
+            <li class="main-nav__item main-nav__item--1"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item main-nav__item--2"><a>Вязание на заказ</a></li>
+            <li class="main-nav__item main-nav__item--search"><a class="main-nav__search" href="#"><span class="main-nav__item--text">Поиск по сайту</span></a></li>
+            <li class="main-nav__item main-nav__item--basket"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item main-nav__item--3"><a href="#">Новые поступления</a></li>
+            <li class="main-nav__item main-nav__item--4"><a href="#">Распродажа</a></li>
+            <li class="main-nav__item main-nav__delivery">
               <a href="#">Бесплатная доставка по России</a></li>
-            </ul>
-          </div>
+          </ul>
         </nav>
         <div class="inner-header-title">
           <h1 class="inner-header-title__text">Вязание на заказ</h1>
@@ -66,7 +62,7 @@
               </li>
               <li>
                 <input type="checkbox" name="order-color3" id="color-tiffany">
-                <label for="color-tiffany">"Тиффани"</label>
+                <label for="color-tiffany">«Тиффани»</label>
               </li>
               <li>
                 <input type="checkbox" name="order-color4" id="color-black">
@@ -118,28 +114,28 @@
             </div>
           </fieldset>
         </div>
-        <fieldset class="order-form__fieldset">
+        <fieldset class="order-form__fieldset order-form__fieldset--extra">
           <div class="order-form__fieldset-wrapper">
             <legend class="order-form__legend">Доп</legend>
-            <textarea name="extra-field" id="extra" rows="7" cols="17">Опишите все ваши пожелания к заказу</textarea>
+            <textarea name="extra-field" id="extra" rows="6" cols="17">Опишите все ваши пожелания к заказу</textarea>
           </div>
         </fieldset>
         <div class="order-form__bottom">
           <p class="order-form__note">*Поля обязательные для заполнения</p>
-          <button class="order-form__btn btn" type="submit">Отправить заказ</button>
+          <button class="order-form__btn btn btn--flex" type="submit">Отправить заказ</button>
         </div>
       </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__links-wrapper">
-          <div class="page-footer__logo"></div>
+          <div class="page-footer__logo"><img src="img/logo-footer.svg"></div>
           <ul class="page-footer__social social-btns">
-            <li class="social-btns__btn social-btns__btn--inst"><a href="#">Инстаграм</a></li>
-            <li class="social-btns__btn social-btns__btn--fb"><a href="#">Фейсбук</a></li>
-            <li class="social-btns__btn social-btns__btn--tw"><a href="#">Твиттер</a></li>
+            <li class="social-btns__btn social-btns__btn--inst"><a href="#"><span class="social-btns__text">Инстаграм</span></a></li>
+            <li class="social-btns__btn social-btns__btn--fb"><a href="#"><span class="social-btns__text">Фейсбук</span></a></li>
+            <li class="social-btns__btn social-btns__btn--tw"><a href="#"><span class="social-btns__text">Твиттер</span></a></li>
           </ul>
-          <a class="page-footer__copyright" href="#">Разработано <span class="visually-hidden">HTMLAcademy</span></a>
+          <a class="page-footer__copyright" href="#"><span class="page-footer__text">Разработано</span> <span class="visually-hidden">HTMLAcademy</span><img src="img/logo-htmlacademy.svg" width="27" height="34"></a>
         </div>
       </div>
     </footer>

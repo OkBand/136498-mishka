@@ -1,13 +1,45 @@
 .main-header-title {
+  .container();
   min-height: 283px;
 }
 
 .main-header-title__text {
-  margin: 0;
-  padding-top: 115px;
+  margin: 0 auto;
+  padding: 0 7%;
+  padding-top: 70px;
   padding-bottom: 120px;
   font-size: @font-biggest;
   font-weight: 600;
+  line-height: 1.1;
   color: @color-main--dark;
   text-align: center;
+}
+
+@media @tablet-width {
+  .main-header-title {
+    padding: 0 6.4%;
+    margin-bottom: 255px;
+  }
+
+  .main-header-title__text {
+    padding: 0;
+    padding-top: 64px;
+    padding-bottom: 120px;
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: @color-main--dark;
+    text-align: center;
+  }
+}
+
+@media @desktop-width {
+  .main-header-title {
+    margin-bottom: 237px;
+    padding: 0 4.76%;
+  }
+
+  .main-header-title__text {
+    font-size: @font-biggest * 1.96;
+  }
 }
