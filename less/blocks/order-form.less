@@ -6,8 +6,10 @@
 
 .order-form__text {
   .container();
+  width: 260px;
   padding: 0 7%;
-  margin-top: 19px;
+  margin: 0 auto;
+  margin-top: -10px;
   margin-bottom: 15px;
   font-size: @font-smaller;
   font-weight: 400;
@@ -16,11 +18,14 @@
 
 .order-form__fieldset-wrapper {
   .container();
+  width: 260px;
+  position: relative;
   padding: 0 7%;
 }
 
 .order-form__bottom {
   .container();
+  width: 260px;
   padding: 0 7%;
 }
 
@@ -65,7 +70,7 @@
 .order-form label {
   position: relative;
   display: block;
-  padding-left: 70px;
+  padding-left: 65px;
   color: @color-main--dark;
 }
 
@@ -73,20 +78,20 @@
   content: "";
   position: absolute;
   top: -10px;
-  left: 8px;
+  left: 2px;
   width: 35px;
   height: 35px;
   border: 2px solid @color-main--dark;
   border-radius: 50%;
   cursor: pointer;
+}
 
-  &:hover {
-    border-color: @color-secondary;
-  }
+.order-form input[type="radio"] + label:hover::before {
+  border-color: @color-secondary;
+}
 
-  &:active {
-    border-color: lighten(@color-main, 50%);
-  }
+.order-form input[type="radio"] + label:active::before {
+  border-color: lighten(@color-main, 50%);
 }
 
 .order-form
@@ -95,7 +100,7 @@ input[type="radio"]:checked
   content: "";
   position: absolute;
   top: 3px;
-  left: 20px;
+  left: 14px;
   width: 15px;
   height: 15px;
   background-color: @color-secondary;
@@ -106,7 +111,7 @@ input[type="radio"]:checked
   content: "";
   position: absolute;
   top: -10px;
-  left: 8px;
+  left: 2px;
   width: 35px;
   height: 35px;
   border: 2px solid @color-main--dark;
@@ -118,12 +123,22 @@ input[type="checkbox"]:checked
   content: "";
   position: absolute;
   z-index: 5;
-  top: 3px;
-  left: -5px;
+  top: 0px;
+  left: 6px;
   width: 30px;
   height: 25px;
   background-image: url(../img/icon-tick.svg);
+  background-repeat: no-repeat;
 }
+
+.order-form input[type="checkbox"] + label:hover::before {
+  border-color: @color-secondary;
+}
+
+.order-form input[type="checkbox"] + label:active::before {
+  border-color: lighten(@color-main, 50%);
+}
+
 
 .order-form__fieldset--text {
   margin-bottom: 34px;
@@ -147,10 +162,47 @@ input[type="checkbox"]:checked
   line-height: 2.7;
   border: none;
   border-bottom: 2px solid @color-main--dark;
-  background: transparent;
+  background-color: transparent;
+
+  &:hover {
+    border-color: @color-secondary;
+  }
+
+  &:focus {
+    color: @color-main;
+    border-color: @color-secondary;
+  }
 }
 .order-form__fieldset--phone {
   margin-bottom: 30px;
+}
+
+input[type="tel"] {
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-position: top 5px right;
+
+  &:hover {
+    background-image: url(../img/icon-phone-green.svg);
+  }
+
+  &:focus {
+    background-image: url(../img/icon-phone-green.svg);
+  }
+}
+
+input[type="email"] {
+  background-image: url(../img/icon-mail.svg);
+  background-repeat: no-repeat;
+  background-position: top 8px right;
+
+  &:hover {
+    background-image: url(../img/icon-mail-green.svg);
+  }
+
+  &:focus {
+    background-image: url(../img/icon-mail-green.svg);
+  }
 }
 
 .order-form__fieldset--email {
@@ -174,6 +226,15 @@ input[type="checkbox"]:checked
   resize: none;
   line-height: 1.25;
   border: 2px solid @color-main--dark;
+
+  &:hover {
+    border-color: @color-secondary;
+  }
+
+  &:focus {
+    color: @color-main;
+    border-color: @color-secondary;
+  }
 }
 
 .order-form__note {
@@ -196,7 +257,7 @@ input[type="checkbox"]:checked
 
   .order-form__text {
     padding: 0 6.4%;
-    margin-top: 78px;
+    padding-top: 95px;
     margin-bottom: 15px;
     font-size: @font-big;
     font-weight: 400;
@@ -248,8 +309,8 @@ input[type="checkbox"]:checked
   }
 
   .order-form input[type="radio"]:checked + label::after {
-    top: 1px;
-    left: 5px;
+    top: 2px;
+    left: 4px;
     width: 20px;
     height: 20px;
   }
@@ -268,6 +329,13 @@ input[type="checkbox"]:checked
   .order-form input[type="checkbox"] + label::before {
     top: -11px;
     left: -16px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .order-form input[type="checkbox"]:checked + label::after {
+    top: 5px;
+    left: -5px;
     width: 48px;
     height: 48px;
   }
@@ -301,6 +369,7 @@ input[type="checkbox"]:checked
     box-sizing: border-box;
     height: 39px;
     margin: 0 auto;
+    font-size: @font-big * 1.1;
   }
 
   .order-form__fieldset--phone .order-form__fieldset-wrapper {
@@ -316,6 +385,7 @@ input[type="checkbox"]:checked
     height: 50px;
     margin: 0 auto;
     font-size: @font-big * 1.1;
+    background-position: top 8px right 25px;
   }
 
   .order-form__fieldset--phone {
@@ -381,6 +451,7 @@ input[type="checkbox"]:checked
   .order-form__text {
     width: 42%;
     padding: 0 4.3%;
+    padding-top: 95px;
   }
 
   .order-form__fieldset-wrapper {

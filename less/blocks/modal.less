@@ -1,26 +1,59 @@
 .modal {
   position: fixed;
   top: 30%;
-  left: 27.5%;
+  left: 0;
   z-index: 5;
-  min-width: 260px;
-  padding: 0 30px;
+  box-sizing: border-box;
+  width: 320px;
   margin: 0 auto;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 335px;
   background-color: @color-main--light;
-  outline: 1px dashed red;
+  box-shadow: 0 8px 10px 0 rgba(233, 233, 233, 0.75);
 }
 
 .modal__close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  display: block;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  width: 25px;
+  height: 14px;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 25px;
+    height: 3px;
+    cursor: pointer;
+
+    background-color: @color-main--dark;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .modal__title {
+  margin-bottom: 0;
+  padding: 0 50px;
   font-size: @font-bigger;
   font-weight: 600;
   color: @color-main--dark;
@@ -28,15 +61,29 @@
   text-transform: uppercase;
 }
 
+.modal-text {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
 .modal__wrapper {
   margin: 0 auto;
-  padding: 0 30px;
 }
 
 .modal .modal__btn {
   min-width: 78px;
-  margin-right: 7px;
+  margin-right: 5px;
   border: 2px solid @gray;
+
+  &:hover {
+    color: @color-main--dark;
+    background-color: @color-main--light;
+    border-color: lighten(@color-main, 50%);
+  }
+
+  &:active {
+    border: 2px solid @color-secondary;
+  }
 }
 
 .modal__btn--active {
@@ -45,6 +92,15 @@
 
 @media @tablet-width {
   .modal {
+    left: 13.5%;
+    width: 565px;
+    margin: 0 auto;
+  }
+}
+
+@media @desktop-width {
+  .modal {
+    left: 33%;
     width: 565px;
     margin: 0 auto;
   }

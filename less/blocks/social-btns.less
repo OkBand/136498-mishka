@@ -5,19 +5,21 @@
   flex-basis: 50%;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
+  padding-top: 27px;
   padding-bottom: 27px;
   list-style: none;
   border-bottom: 1px solid @gray;
 }
 
 .social-btns__btn {
+  width: 30px;
+  height: 30px;
   margin: auto 0;
   margin-right: 9%;
 }
 
 .social-btns__text {
-  font-size: 0;;
+  font-size: 0;
 }
 
 .social-btns li:last-child {
@@ -32,83 +34,36 @@
   text-decoration: none;
 }
 
-.social-btns__btn--inst a {
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-
-    background-image: url(../img/icon-insta.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+.social-btns__icon {
+  &:hover {
+    fill: @color-secondary;
   }
-  &:hover::before {
 
-  }
-  &:active::before {
-
-  }
-}
-
-.social-btns__btn--fb a {
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0px;
-    width: 30px;
-    height: 30px;
-
-    background-image: url(../img/icon-fb.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &:hover::before {
-
-  }
-  &:active::before {
-
-  }
-}
-
-.social-btns__btn--tw a {
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-
-    background-image: url(../img/icon-twitter.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &:hover::before {
-
-  }
-  &:active::before {
-
+  &:active {
+    opacity: 0.5;
   }
 }
 
 @media @tablet-width {
   .social-btns {
     margin-left: 12%;
-    padding-top: 40px;
+    padding-top: 65px;
+    padding-bottom: 55px;
   }
+
   .social-btns__btn a {
     padding: 0;
+    margin-left: 6px;
   }
 }
 
 @media @desktop-width {
+  .social-btns {
+    margin-left: 12%;
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
+
   .social-btns__btn a {
     padding: 0;
   }
