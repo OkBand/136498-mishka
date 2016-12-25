@@ -7,16 +7,33 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <svg style="display:none">
+      <symbol version="1.1" id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+        <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+      </symbol>
+      <symbol version="1.1" id="cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+        <path d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+      </symbol>
+    </svg>
     <header class="page-header page-header--inner-header">
       <div class="page-header__wrapper">
         <nav class="main-nav main-nav--closed  main-nav--nojs">
           <span class="main-nav__toggle"></span>
           <ul class="main-nav__items">
-            <li class="logo main-nav__logo"><a class="main-nav__logo-link main-nav__logo-link--desk" href="index.html"><img src="img/logo-mobile.svg" width="95" height="50" alt="MISHKA"></a></li>
+            <li class="logo main-nav__logo"><a class="main-nav__logo-link" href="index.html">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="95" height="50" alt="MISHKA">
+              </picture></a></li>
             <li class="main-nav__item main-nav__item--1"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item main-nav__item--2"><a>Вязание на заказ</a></li>
-            <li class="main-nav__item main-nav__item--search"><a class="main-nav__search" href="#"><span class="main-nav__item--text">Поиск по сайту</span></a></li>
-            <li class="main-nav__item main-nav__item--basket"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item main-nav__item--search">
+              <a class="main-nav__search" href="#">
+                <svg class="main-nav__search-icon" width="22" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use></svg><span class="main-nav__item--text">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--basket"><a class="main-nav__basket" href="#"><svg class="main-nav__basket-icon" width="22" height="19"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cart"></use></svg>Корзина: пока пуста</a></li>
             <li class="main-nav__item main-nav__item--3"><a href="#">Новые поступления</a></li>
             <li class="main-nav__item main-nav__item--4"><a href="#">Распродажа</a></li>
             <li class="main-nav__item main-nav__delivery">
@@ -28,103 +45,105 @@
         </div>
       </div>
     </header>
-    <main class="order-form__background">
-      <form class="order-form" action="order-form.html" name="order-form" method="get">
-        <p class="order-form__text">
-            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-        </p>
-        <fieldset class="order-form__fieldset">
-          <div class="order-form__fieldset-wrapper">
-            <legend class="order-form__legend">Тип</legend>
-            <ul class="order-form__list">
-              <li>
-                <input type="radio" name="order-type" value="accessories" id="type-accessories" checked>
-                <label for="type-accessories">Аксессуар для интерьера</label>
-              </li>
-              <li>
-                <input type="radio" name="order-type" value="toy" id="type-toy">
-                <label for="type-toy">Детская игрушка</label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <fieldset class="order-form__fieldset order-form__fieldset--color order-form__background-wrapper">
-          <div class="order-form__fieldset-wrapper">
-            <legend class="order-form__legend">Цвет</legend>
-            <ul class="order-form__list">
-              <li>
-                <input type="checkbox" name="order-color1" id="color-white" checked>
-                <label for="color-white">Белый</label>
-              </li>
-              <li>
-                <input type="checkbox" name="order-color2" id="color-grey" checked>
-                <label for="color-grey">Серый</label>
-              </li>
-              <li>
-                <input type="checkbox" name="order-color3" id="color-tiffany">
-                <label for="color-tiffany">«Тиффани»</label>
-              </li>
-              <li>
-                <input type="checkbox" name="order-color4" id="color-black">
-                <label for="color-black">Черный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="order-color5" id="color-pink">
-                <label for="color-pink">Розовый</label>
-              </li>
-              <li>
-                <input type="checkbox" name="order-color6" id="color-orange">
-                <label for="color-orange">Оранжевый</label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <fieldset class="order-form__fieldset order-form__fieldset--text">
-          <div class="order-form__fieldset-wrapper">
-            <legend class="order-form__legend">ФИО</legend>
-            <ul class="order-form__personal-data">
-              <li>
-                <label for="first-name">Имя:</label>
-                <input type="text" name="first-name-field" id="first-name" placeholder="Введите ваше имя*" required>
-              </li>
-              <li>
-                <label for="last-name">Фамилия:</label>
-                <input type="text" name="last-name-field" id="last-name" placeholder="Укажите фамилию*" required>
-              </li>
-              <li>
-                <label for="patronymic">Отчество:</label>
-                <input type="text" name="patronymic-field" id="patronymic" placeholder="Отчество, если желаете">
-              </li>
-            </ul>
-          </div>
-        </fieldset>
-        <div class="order-form__background-wrapper">
-          <fieldset class="order-form__fieldset order-form__fieldset--phone">
+    <main class="main main--form">
+      <div class="order-form__background">
+        <form class="order-form" action="order-form.html" name="order-form" method="get">
+          <p class="order-form__text">
+              Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+          <fieldset class="order-form__fieldset">
             <div class="order-form__fieldset-wrapper">
-              <legend class="order-form__legend">Тел</legend>
-              <input type="tel" name="phone-field" id="phone" pattern="[\+][0-9]{8}" placeholder= "+7 XXX XX XX*" required>
-              <a class="order-form__link" href="#"></a>
+              <legend class="order-form__legend">Тип</legend>
+              <ul class="order-form__list">
+                <li>
+                  <input type="radio" name="order-type" value="accessories" id="type-accessories" checked>
+                  <label for="type-accessories">Аксессуар для интерьера</label>
+                </li>
+                <li>
+                  <input type="radio" name="order-type" value="toy" id="type-toy">
+                  <label for="type-toy">Детская игрушка</label>
+                </li>
+              </ul>
             </div>
           </fieldset>
-          <fieldset class="order-form__fieldset order-form__fieldset--email">
+          <fieldset class="order-form__fieldset order-form__fieldset--color order-form__background-wrapper">
             <div class="order-form__fieldset-wrapper">
-              <legend class="order-form__legend">e-mail</legend>
-              <input type="email" name="email-field" id="email" placeholder="Ваш Email*" required>
-              <a class="order-form__link" href="#"></a>
+              <legend class="order-form__legend">Цвет</legend>
+              <ul class="order-form__list">
+                <li>
+                  <input type="checkbox" name="order-color1" id="color-white" checked>
+                  <label for="color-white">Белый</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="order-color2" id="color-grey" checked>
+                  <label for="color-grey">Серый</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="order-color3" id="color-tiffany">
+                  <label for="color-tiffany">«Тиффани»</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="order-color4" id="color-black">
+                  <label for="color-black">Черный</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="order-color5" id="color-pink">
+                  <label for="color-pink">Розовый</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="order-color6" id="color-orange">
+                  <label for="color-orange">Оранжевый</label>
+                </li>
+              </ul>
             </div>
           </fieldset>
-        </div>
-        <fieldset class="order-form__fieldset order-form__fieldset--extra">
-          <div class="order-form__fieldset-wrapper">
-            <legend class="order-form__legend">Доп</legend>
-            <textarea name="extra-field" id="extra" rows="6" cols="17">Опишите все ваши пожелания к заказу</textarea>
+          <fieldset class="order-form__fieldset order-form__fieldset--text">
+            <div class="order-form__fieldset-wrapper">
+              <legend class="order-form__legend">ФИО</legend>
+              <ul class="order-form__personal-data">
+                <li>
+                  <label for="first-name">Имя:</label>
+                  <input type="text" name="first-name-field" id="first-name" placeholder="Введите ваше имя*" required>
+                </li>
+                <li>
+                  <label for="last-name">Фамилия:</label>
+                  <input type="text" name="last-name-field" id="last-name" placeholder="Укажите фамилию*" required>
+                </li>
+                <li>
+                  <label for="patronymic">Отчество:</label>
+                  <input type="text" name="patronymic-field" id="patronymic" placeholder="Отчество, если желаете">
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <div class="order-form__background-wrapper">
+            <fieldset class="order-form__fieldset order-form__fieldset--phone">
+              <div class="order-form__fieldset-wrapper">
+                <legend class="order-form__legend">Тел</legend>
+                <input type="tel" name="phone-field" id="phone" pattern="[\+][0-9]{8}" placeholder= "+7 XXX XX XX*" required>
+                <a class="order-form__link" href="#"></a>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__fieldset order-form__fieldset--email">
+              <div class="order-form__fieldset-wrapper">
+                <legend class="order-form__legend">e-mail</legend>
+                <input type="email" name="email-field" id="email" placeholder="Ваш Email*" required>
+                <a class="order-form__link" href="#"></a>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
-        <div class="order-form__bottom">
-          <p class="order-form__note">*Поля обязательные для заполнения</p>
-          <button class="order-form__btn btn btn--flex" type="submit">Отправить заказ</button>
-        </div>
-      </form>
+          <fieldset class="order-form__fieldset order-form__fieldset--extra">
+            <div class="order-form__fieldset-wrapper">
+              <legend class="order-form__legend">Доп</legend>
+              <textarea name="extra-field" id="extra" rows="6" cols="17">Опишите все ваши пожелания к заказу</textarea>
+            </div>
+          </fieldset>
+          <div class="order-form__bottom">
+            <p class="order-form__note">*Поля обязательные для заполнения</p>
+            <button class="order-form__btn btn btn--flex" type="submit">Отправить заказ</button>
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

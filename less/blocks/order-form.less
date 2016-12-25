@@ -78,6 +78,15 @@
   height: 35px;
   border: 2px solid @color-main--dark;
   border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border-color: @color-secondary;
+  }
+
+  &:active {
+    border-color: lighten(@color-main, 50%);
+  }
 }
 
 .order-form
@@ -101,6 +110,19 @@ input[type="radio"]:checked
   width: 35px;
   height: 35px;
   border: 2px solid @color-main--dark;
+}
+
+.order-form
+input[type="checkbox"]:checked
++ label::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  top: 3px;
+  left: -5px;
+  width: 30px;
+  height: 25px;
+  background-image: url(../img/icon-tick.svg);
 }
 
 .order-form__fieldset--text {
@@ -182,6 +204,7 @@ input[type="radio"]:checked
   }
   .order-form__background-wrapper {
     background-color: @gray--light;
+
   }
 
   .order-form__fieldset-wrapper {

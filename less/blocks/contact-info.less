@@ -45,7 +45,7 @@
 
 @media @tablet-width {
   .contact-info {
-    .container();
+    position: relative;
   }
 
   .contact-info__title {
@@ -55,6 +55,12 @@
     margin-left: -3px;
     margin-bottom: 33px;
     font-size: @font-bigger * 1.75;
+  }
+
+  .contact-info__flag {
+    position: absolute;
+    top: 50px;
+    right: 10px;
   }
 
   .contact-info__table {
@@ -81,6 +87,19 @@
 
   .contact-info__value {
     padding-left: 15px;
+  }
+
+  .contact-info__table a{
+    display: block;
+    border-bottom: 1px solid @color-secondary;
+
+    &:hover {
+      color: @color-secondary;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   .contact-info__feedback {
@@ -112,6 +131,12 @@
     margin-bottom: 30px;
     margin-left: 9.5%;
     font-size: @font-biggest * 1.96;
+  }
+
+  .contact-info__flag {
+    position: absolute;
+    top: 150px;
+    left: 10px;
   }
 
   .contact-info__table {

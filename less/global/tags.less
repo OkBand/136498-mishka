@@ -1,6 +1,7 @@
 body {
   min-width: 260px;
-
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -23,7 +24,54 @@ button {
   background-color: transparent;
 }
 
-@media @tablet-width {
-  font-size: @font-big;
+.main--index {
+  background-image: url(../img/bg-zigzag-line.svg), url(../img/bg-zigzag-line.svg);
+  background-position: 50% 24.5%, 50% 75%;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
 
+@media @tablet-width {
+
+  .main {
+    position: relative;
+    z-index: 2;
+    background-image: url(../img/bg-zigzag-fill.svg);
+    background-position: top center;
+    margin-top: -15px;
+
+
+    &--index {
+      background-image: url(../img/bg-zigzag-fill.svg), url(../img/bg-zigzag-line.svg), url(../img/bg-zigzag-line.svg);
+      background-position: top center, 50% 22%, 50% 70%;
+      background-repeat: no-repeat;
+      background-size: 80%;
+    }
+
+    &--catalog {
+      margin-top: -75px;
+    }
+
+    &--form {
+      margin-top: -95px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .main {
+    margin-top: -35px;
+
+    &--index {
+      background-position: top center, 50% 29%, 50% 80%;
+    }
+
+    &--catalog {
+      margin-top: -130px;
+    }
+
+    &--form {
+      margin-top: -150px;
+    }
+  }
 }

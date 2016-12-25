@@ -19,27 +19,46 @@
   background-image: linear-gradient(@color-secondary 50%, @color-secondary--dark 50%);
 }
 
-.categories__list li:first-child {
-  background-image: url(../img/icon-interior.svg);
-  background-repeat: no-repeat;
-  background-position: 75% 20px;
+.categories li {
+  position: relative;
 }
 
-.categories li:nth-child(2) {
-  background-image: url(../img/icon-toy.svg);
-  background-repeat: no-repeat;
-  background-position: 77% 20px;
+.categories__image {
+  /*position: absolute;
+  top: 25px;
+  left: 66%;*/
+  padding-top: 18px;
+  margin-right: 10%;
+  opacity: 0.3;
+
+  &--2 {
+    margin-right: 6%;
+  }
 }
 
-.categories__interior,
-.categories__toys {
-  display: block;
-  width: 104px;
-  padding: 21px 9px;
-  padding-bottom: 27px;
+.categories__category a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0;
+  padding-bottom: 15px;
   font-size: @font-big;
   line-height: 1.5;
   color: @color-main--light;
+  cursor: pointer;
+
+  &:hover {
+    padding-top: 3px;
+    padding-bottom: 25px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.categories__text {
+  width: 54px;
 }
 
 @media @tablet-width {
@@ -69,22 +88,18 @@
   }
 
   .categories__category a {
-    padding-top: 28px;
-    padding-left: 35px;
+    //padding-top: 28px;
+    padding-left: 38px;
     font-size: 20px;
   }
 
-  .categories__list li:first-child {
-    background-image: url(../img/icon-interior.svg);
-    background-repeat: no-repeat;
-    background-position: 87% 25px;
-  }
+.categories__image {
+  margin-right: 25%;
 
-  .categories li:nth-child(2) {
-    background-image: url(../img/icon-toy.svg);
-    background-repeat: no-repeat;
-    background-position: 87% 25px;
+  &--2 {
+
   }
+}
 }
 
 @media @desktop-width {
@@ -92,15 +107,11 @@
     margin-bottom: 12px;
   }
 
-  .categories__list li:first-child {
-    background-image: url(../img/icon-interior.svg);
-    background-repeat: no-repeat;
-    background-position: 92.5% 29px;
-  }
+  .categories__image {
+    margin-right: 15%;
 
-  .categories li:nth-child(2) {
-    background-image: url(../img/icon-toy.svg);
-    background-repeat: no-repeat;
-    background-position: 93% 30px;
+    &--2 {
+
+    }
   }
 }

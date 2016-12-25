@@ -4,6 +4,15 @@
 
 .catalog-item {
   margin-bottom: 27px;
+  border: 1px solid @gray;
+
+  &:hover {
+    box-shadow: 0 8px 10px 0 rgba(233, 233, 233, 0.75);
+  }
+
+  &:active {
+    box-shadow: 0 3px 10px 0 rgba(233, 233, 233, 0.75);
+  }
 }
 
 .catalog-item:last-child {
@@ -13,16 +22,13 @@
 .catalog-item__photo {
   width: 260px;
   height: 195px;
-  margin: 30px auto;
-  margin-bottom: 0;
-  outline: 1px dashed blue;
+  margin: 0 auto;
 }
 
 .catalog-item__text-wrapper {
   width: 260px;
   margin: 0 auto;
   padding-top: 10px;
-  border: 1px solid @gray;
 }
 
 .catalog-item__text-link h2 {
@@ -32,7 +38,13 @@
   line-height: 1.56;
   color: @color-main--dark;
 
-  outline: 1px dashed blue;
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-item__subtitle {
@@ -62,8 +74,7 @@
   left: 10px;
 }
 
-.catalog-item__basket-link::before {
-  content: "";
+.catalog-item__basket-icon {
   position: absolute;
   top: 0;
   left: -4px;
@@ -71,12 +82,16 @@
   width: 25px;
   height: 25px;
   cursor: pointer;
-
-  background-image: url("../img/icon-cart.svg");
-  background-position: 0 -1px;
-  background-repeat: no-repeat;
   opacity: 0.3;
-  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    fill: @color-secondary;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .catalog-item__hidden-text {
